@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookmarkController;
 use Illuminate\Http\Request;
 
 /*
@@ -17,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/book', view('top'));
+Route::post('/book','BookmarkController@create');
+Route::get('/book','BookmarkController@show');
+Route::get('/book/{id}','BookmarkController@getBookmark');
+Route::post('/book/{id}','BookmarkController@edit');
+Route::delete('/book/{id','BookmarkController@delete');
