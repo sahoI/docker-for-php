@@ -18,8 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/book','BookmarkController@create');
-Route::get('/book','BookmarkController@show');
-Route::get('/book/{id}','BookmarkController@getBookmark');
-Route::post('/book/{id}','BookmarkController@edit');
-Route::delete('/book/{id','BookmarkController@delete');
+Route::post('/event','EventsController@create');
+Route::get('/event','EventsController@show');
+Route::get('/event/{id}','EventsController@getBookmark');
+Route::post('/event/{id}','EventsController@edit');
+Route::delete('/event/{id}','EventsController@delete');
